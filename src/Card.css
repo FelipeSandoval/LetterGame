@@ -1,0 +1,32 @@
+.card-container{
+  border: 1px solid #b26221;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 3rem;
+  padding: 1.5rem;
+  transition: all .4s ease;
+  background-color: #F88A2F;
+  color: #ffffff;
+  width: 20%;
+  text-align: center;
+}
+
+.card-container:hover{
+  background-color: #b26221;
+}
+
+.card-container.isValid{
+  background-color: #ACE64D;
+}
+
+.card-container.isValid:hover{
+  background-color: #6f9631;
+}
+
+.card-container.isInValid{
+  background-color: #CD2D3F;
+}
+
+.card-container.isInValid:hover{
+  background-color: #8c1d2a;
+}

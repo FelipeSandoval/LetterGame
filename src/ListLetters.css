@@ -1,0 +1,46 @@
+.ListLetters{
+  border: 1px solid #979797;
+  padding: 0.8rem 1rem;
+  position: relative;
+  width: 90%;
+  display: inline-block;
+  min-height: 3rem;
+}
+
+.container-list{
+  width: 30%;
+  margin: 2.5rem auto;
+}
+
+.Letter{
+  display: inline-block;
+  font-size: 2rem;
+  transition: .2s all ease;
+}
+
+.delete-button{
+  display: inline-block;
+}
+
+.stateSpan{
+  position: absolute;
+  left: 87%;
+  top: 40%;
+  transition: .2s all ease;
+}
+
+.stateSpan.isValid{
+  color: #ACE64D;
+}
+
+.stateSpan.isInValid{
+  color: #CD2D3F;
+}
+
+.noLetterSpan{
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  transition: .4s all ease;
+}
+

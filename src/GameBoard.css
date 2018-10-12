@@ -1,0 +1,25 @@
+html{
+  font-size: 16px;
+}
+
+.gameBoard{
+  padding: 0 10rem;
+}
+
+.buttons-container{
+  margin: 0 auto;
+  width: 60%;
+}
+
+button{
+  margin: .5rem 0;
+  padding: .5rem;
+  border-radius: 10px;
+  outline: none;
+  background-color: #e80909;
+  color: #ffffff;
+}
+
+button:hover{
+  background-color: #e53434;
+}

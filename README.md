@@ -5,7 +5,7 @@
 
 ## Let's get down to business, this is a Letter Game
 
-- You have to pick letters to conform the words given in the dictionary
+- You have to pick letters to compose the words given in the dictionary
 - It validates if they exist... that's pretty much it xD
 
 ## Part 3

@@ -16,7 +16,7 @@ I'm supposed to list the more severe problems here we go
 
 - i believe the ```doesnt work
 
-- Data base connection, never ever ever do this its a huge segurity breach, this belongs to the back end
+- Data base connection, never ever ever do this its a huge segurity breach, this belongs to the back end. If it is back end just put it on a separate file
 
 - Credentials, you should never handle this on the front end, its a sin and you should only persist tokens
 and data to display, if you really have to at least use enviroment (you can use enviroment for ports and URL's in general or at least a respath).
@@ -24,7 +24,7 @@ If it is back end it should go to an enviroment too
 
 - Services should be on a service file and be implemented on components, so you can reuse those and only change the specific implementation
 
-- i would handle the htm
+- i would handle the html on a separate file
 
 - its not very important buf if you are using webpack you can define basepaths to make your paths to files shorter
 

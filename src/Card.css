@@ -30,3 +30,9 @@
 .card-container.isInValid:hover{
   background-color: #8c1d2a;
 }
+
+@media only screen and (max-width: 1070px) {
+  .card-container{
+    width: 10%;
+  } 
+}

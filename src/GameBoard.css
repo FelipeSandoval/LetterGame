@@ -8,12 +8,12 @@ html{
 
 .buttons-container{
   margin: 0 auto;
-  width: 60%;
+  width: 70%;
 }
 
 button{
-  margin: .5rem 0;
-  padding: .5rem;
+  margin: 1.5rem .5rem;
+  padding: .7rem;
   border-radius: 10px;
   outline: none;
   background-color: #e80909;
@@ -22,4 +22,14 @@ button{
 
 button:hover{
   background-color: #e53434;
+}
+
+@media only screen and (max-width: 1330px) {
+  .gameBoard{
+    padding: 0 2rem;
+  }
+
+  .buttons-container{
+    width: 80%;
+  }
 }

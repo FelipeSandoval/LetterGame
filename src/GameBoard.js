@@ -9,10 +9,12 @@ export default class GameBoard extends Component{
   constructor(props){
     super(props);
 
+    // we get the letters map then as we need
     let cards = board.map((cv, index) => {
       return {letter: cv, isSelected: false, key:index };
     });
 
+    //define state
     this.state = {
           cards, 
           listSelectedLetters: [], 
@@ -21,12 +23,13 @@ export default class GameBoard extends Component{
     };
 
     this.clearAllLetters = this.clearAllLetters.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+    this.handleListLetters = this.handleListLetters.bind(this);
     this.updateSelectedWord = this.updateSelectedWord.bind(this);
     this.popLastLetter = this.popLastLetter.bind(this);
 
   }
 
+  // To clear all selected letters
   clearAllLetters(){
     const newCards = this.state.cards.map((cv) => {
         return {
@@ -37,6 +40,7 @@ export default class GameBoard extends Component{
     this.setState({cards: newCards, listSelectedLetters: []});
   }
 
+  // Component life-cicle that triggers every time state or prop is change i used to check if the word is valid (to not change setState callbacks)
   componentDidUpdate(prevProps, prevState){
     if(this.state.listSelectedLetters.length !== prevState.listSelectedLetters.length) {
       let listCheckedLetters = this.state.listSelectedLetters.map((cv) => (cv.letter));
@@ -45,14 +49,16 @@ export default class GameBoard extends Component{
     }
   }
 
+  // Pretty self explanatory
   popLastLetter(list){
     if(list instanceof Array && list.length > 0){
       let deletedLetter = [...list].pop();
-      this.handleClick(deletedLetter.key, true);
+      this.handleListLetters(deletedLetter.key, true);
     }
   }
 
-  handleClick(key, isSelected){
+  // I use this method to update the list of selected letters vs the unselected list
+  handleListLetters(key, isSelected){
     const checkLetter = (cards,selectedId,isSelected) => {
       return cards.map((cv) => {
         if(cv.key === selectedId){
@@ -70,6 +76,7 @@ export default class GameBoard extends Component{
     this.setState({cards})
   }
 
+  // Helper to update the list of selected letters
   updateSelectedWord(selectedLetter,listSelectedLetters, isSelected){
     if(isSelected){
       this.setState({listSelectedLetters: [...listSelectedLetters, selectedLetter]})
@@ -90,7 +97,7 @@ export default class GameBoard extends Component{
           letter={card.letter}
           key={i}
           id={card.key}
-          onClick={() => this.handleClick(card.key, card.isSelected)}
+          onClick={() => this.handleListLetters(card.key, card.isSelected)}
           backGroundColor={card.isSelected ? backGroundColor : ''}
         />)
     });
